@@ -9,7 +9,7 @@ const writeToFile = (destination, content) =>
     err ? console.error(err) : console.info(`\nData written to ${destination}`)
   );
 
-const readAndAppend = (content, file) => {
+const readAndAppend = (content, file) => {    
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
