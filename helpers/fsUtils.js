@@ -9,6 +9,7 @@ const writeToFile = (destination, content) =>
     err ? console.error(err) : console.info(`\nData written to ${destination}`)
   );
 
+  // Push new data to the file
 const readAndAppend = (content, file) => {    
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
@@ -21,6 +22,7 @@ const readAndAppend = (content, file) => {
   });
 };
 
+// Delete selected data from the file
 const readAndDelete = (id, file) => {
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
