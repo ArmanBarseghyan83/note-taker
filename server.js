@@ -2,7 +2,7 @@ const express = require('express')
 const uniqid = require('uniqid')
 const path = require('path')
 
-const { readFromFile, readAndAppend } = require('./helpers/fsUtils');
+const { readFromFile, readAndAppend, readAndDelete } = require('./helpers/fsUtils');
 
 const app = express()
 const PORT = 3001
@@ -35,9 +35,20 @@ app.post('/api/notes', (req, res) => {
         };
 
         readAndAppend(newNote, './db/db.json');
-        res.json(`Note added successfully`);
+        res.json('Note added successfully');
     } else {
         res.json('Error in adding note');
+    }
+})
+
+
+app.delete('/api/notes/:id', (req, res) => {
+
+    if (req.params.id) {
+        readAndDelete(req.params.id, './db/db.json')
+        res.json('Note deleted successfully')
+    } else {
+        res.json('Error in deleting note');
     }
 })
 
