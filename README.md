@@ -8,7 +8,7 @@ This project uses Express.js for back end and saves and retrieves note data from
 
 Click on the button "Get Started" to go to the notes page. Enter a new note title and the note’s text. Click "Save Notes" button to save the note, or "Clear Form" button to clear the form. Click on an existing note in the list in the left-hand column to open the note data. Click delete icon on the note to delete the note.
 
-Go to [Note taker]()
+Go to [Note taker](https://notetraker-822ddb194080.herokuapp.com/)
 
 The following GIF shows the web application's appearance and functionality:
 
